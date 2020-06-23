@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jun 24 02:56:26 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-e313-34f6-000001be1ae0 
+on database directory memory:/home/tushar/Documents/Github/JAVA Projects/demodbSpringBoot/1a8a4e3e-83d7-491a-bbef-ca72f6c21edd with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42a57993 
+Loaded from file:/home/tushar/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=14.0.1+7
+user.dir=/home/tushar/Documents/Github/JAVA Projects/demodbSpringBoot
+os.name=Linux
+os.arch=amd64
+os.version=5.3.0-53-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
