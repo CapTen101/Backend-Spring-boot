@@ -29,31 +29,43 @@ public class TopicService {
     }
 
     public Topic getTopic(String id) {
-        Topic returnedTopic = null;
-        for (Topic t : topicList) {
-            if (t.getTopicName().equals(id))
-                returnedTopic = t;
-        }
-        return returnedTopic;
+
+//        Topic returnedTopic = null;
+//        for (Topic t : topicList) {
+//            if (t.getTopicName().equals(id))
+//                returnedTopic = t;
+//        }
+//        return returnedTopic;
+
+        return topicRepository.findById(id).orElse(null);
+
     }
 
     public void addTopic(Topic topic) {
+
 //        topicList.add(topic);
+
         topicRepository.save(topic);
     }
 
     public void updateTopic(Topic topic, String id) {
-        Topic returnedTopic = null;
-        for (Topic t : topicList) {
-            if (t.getTopicName() == topic.getTopicName())
-                returnedTopic = t;
-        }
 
-        assert returnedTopic != null;
-        returnedTopic.setTopicName(id);
+//        Topic returnedTopic = null;
+//        for (Topic t : topicList) {
+//            if (t.getTopicName() == topic.getTopicName())
+//                returnedTopic = t;
+//        }
+//
+//        assert returnedTopic != null;
+//        returnedTopic.setTopicName(id);
+
+        topicRepository.save(topic);
     }
 
     public void deleteTopic(String id) {
-        topicList.removeIf(t -> t.getTopicName().equals(id));
+
+//        topicList.removeIf(t -> t.getTopicName().equals(id));
+
+        topicRepository.deleteById(id);
     }
 }
