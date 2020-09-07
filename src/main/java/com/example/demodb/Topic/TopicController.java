@@ -11,12 +11,17 @@ public class TopicController {
     @Autowired
     private TopicService topicService;
 
+    @GetMapping("/")
+    public String index() {
+        return "Hello There!";
+    }
+
     @GetMapping("/topics")
     public List<Topic> func() {
         return topicService.getAllTopics();
     }
 
-    @GetMapping("/topics/{id}")
+    @GetMapping(value = "/topics/{id}", consumes = "application/json", produces = "application/json")
     public Topic getTopic(@PathVariable String id) {
         return topicService.getTopic(id);
     }
@@ -26,6 +31,8 @@ public class TopicController {
         topicService.addTopic(topic);
         return "added successfully";
     }
+
+
 
     @PutMapping("/topics/{id}")
     public void updateTopic(@PathVariable String id, @RequestBody Topic topic) {

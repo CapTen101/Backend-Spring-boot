@@ -13,7 +13,8 @@ public class TopicService {
     @Autowired
     TopicRepository topicRepository;
 
-    private List<Topic> topicList = new ArrayList<Topic>(Arrays.asList(new Topic("energy", 9),
+    private List<Topic> topicList = new ArrayList<>(Arrays.asList(
+            new Topic("energy", 9),
             new Topic("chemtech", 9),
             new Topic("Mass Transfer", 9),
             new Topic("ReactionEngg", 8),
